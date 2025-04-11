@@ -172,3 +172,19 @@ footer p {
     line-height: 1.4;
     color: white;
 }
+address {
+    font-style: normal;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.05em;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+address:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
