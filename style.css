@@ -123,19 +123,100 @@ header p {
 #education ul li {
     margin-bottom: 10px;
 }
-
-/* Contact Section */
-#contact {
-    background: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Contact Section Styling */
+.contact-section {
+  background: #f5f5f5;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-#contact a {
-    color: #4CAF50;
-    text-decoration: none;
+.contact-section h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+}
+
+.social-icons span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons a {
+    padding: 8px 14px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-icons span {
+    font-size: 14px;
+  }
 }
 
 /* Footer Section */
@@ -188,3 +269,4 @@ address {
 address:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
