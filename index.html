@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Suhail's Portfolio - OT Technician, Phlebotomist, Dispenser">
-  <meta name="keywords" content="Muhammad Suhail, Portfolio, OT Technician, Phlebotomist, Dispenser, Badin, Medical Professional">
-  <meta name="author" content="Muhammad Suhail">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Suhail's Portfolio - OT Technician, Phlebotomist, Dispenser" />
+  <meta name="keywords" content="Muhammad Suhail, Portfolio, OT Technician, Phlebotomist, Dispenser, Badin, Medical Professional" />
+  <meta name="author" content="Muhammad Suhail" />
   <title>Muhammad Suhail - Medical Professional Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-  <!-- Disable Text Selection (CSS) -->
-  <style>
-    body {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-  </style>
-
-  <!-- Disable Right Click -->
+  <!-- Protection: Disable right-click -->
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
   </script>
-</head>
-<body>
 
-  <!-- Transparent Overlay to confuse screenshot tools -->
+  <!-- Protection: Disable keyboard shortcuts like PrintScreen, Ctrl+U, Ctrl+S, F12 -->
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'PrintScreen' ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 's')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+        e.key === 'F12'
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</head>
+<body oncopy="return false" oncut="return false" onpaste="return false">
+
+  <!-- Protection: Transparent overlay (screenshot blockers may fail) -->
   <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;pointer-events:none;"></div>
 
+  <!-- Your existing content below remains unchanged -->
+  
   <!-- Hero Section -->
   <header class="hero container" data-aos="fade-up">
     <div class="text-center">
@@ -43,10 +49,9 @@
     </div>
   </header>
 
-  <!-- About Me Section -->
-  <!-- [REMAINING CONTENT UNCHANGED] -->
+  <!-- [Continue with your original sections...] -->
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="container" data-aos="fade-up">
     <p>&copy; 2025 Muhammad Suhail. This portfolio reflects my journey in healthcare and emerging technologies. All content is original and copyright protected.</p>
   </footer>
@@ -54,25 +59,8 @@
   <!-- AOS Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
-
-  <!-- Keyboard Shortcut Block -->
-  <script>
-    document.addEventListener('keydown', function (e) {
-      if (
-        e.key === 'PrintScreen' ||
-        (e.ctrlKey && (e.key === 's' || e.key === 'u')) ||
-        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'j'))
-      ) {
-        e.preventDefault();
-      }
-    });
-  </script>
-
   <script src="script.js"></script>
 </body>
 </html>
