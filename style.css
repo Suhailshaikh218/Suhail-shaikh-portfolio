@@ -1,63 +1,218 @@
 /* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-{ margin: 0; padding: 0; box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
 
-html { scroll-behavior: smooth; }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-body { font-family: "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-img { max-width: 100%; height: auto; display: block; }
+/* ===== Header ===== */
+header.hero {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+header h1.animated-heading {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  animation: slideFadeIn 1.2s ease-out forwards;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
 
-/* ===== Header ===== */ header.hero { background: linear-gradient(135deg, #4CAF50, #2e7d32); color: white; padding: 60px 20px; text-align: center; }
+header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
 
-header h1.animated-heading { font-size: 3rem; letter-spacing: 2px; margin-bottom: 10px; animation: slideFadeIn 1.2s ease-out forwards; text-shadow: 1px 1px 2px rgba(0,0,0,0.4); }
+.profile-photo-large {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
 
-header h2 { font-size: 1.8rem; margin-bottom: 10px; }
+.designation {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  color: #f1f1f1;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.profile-photo-large { height: 200px; width: 200px; border-radius: 50%; object-fit: cover; margin: 20px auto; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); }
+address {
+  font-style: normal;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 30px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
 
-.designation { font-size: 1.1rem; margin-top: 12px; color: #f1f1f1; max-width: 700px; margin-left: auto; margin-right: auto; }
+address:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
-address { font-style: normal; font-size: 1rem; color: #fff; background: rgba(255, 255, 255, 0.2); padding: 6px 14px; border-radius: 30px; display: inline-block; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease; }
+/* ===== Section Styles ===== */
+section {
+  background: white;
+  margin: 30px auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  width: 100%;
+}
 
-address:hover { background-color: rgba(255, 255, 255, 0.3); }
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 10px;
+  text-align: center;
+}
 
-/* ===== Section Styles ===== */ section { background: white; margin-top: 30px; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.07); }
+section p,
+section li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
 
-section h2 { font-size: 2rem; margin-bottom: 20px; color: #0077cc; border-bottom: 2px solid #0077cc; padding-bottom: 10px; }
+/* ===== Lists ===== */
+ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
 
-section p, section li { font-size: 1.05rem; margin-bottom: 10px; }
+/* ===== Experience ===== */
+.experience-item h3 {
+  color: #388e3c;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
 
-/* ===== Lists ===== */ ul { list-style: disc inside; padding-left: 0; }
+.experience-item p {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
 
-.experience-item h3 { color: #388e3c; font-size: 1.3rem; margin-bottom: 6px; }
+/* ===== Social Icons ===== */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-.experience-item p { font-weight: 500; margin-bottom: 6px; }
+.social-icons a {
+  background: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
-/* ===== Social Icons ===== */ .social-icons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-.social-icons a { background: white; color: #333; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 10px; text-decoration: none; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
+.social-icons img {
+  width: 28px;
+  height: 28px;
+}
 
-.social-icons a:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
+/* ===== Footer ===== */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  margin-top: 40px;
+}
 
-.social-icons img { width: 28px; height: 28px; }
+/* ===== Animations ===== */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* ===== Footer ===== */ footer { background: #222; color: #fff; text-align: center; padding: 20px; font-size: 0.95rem; }
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  header h1.animated-heading {
+    font-size: 2rem;
+  }
 
-/* ===== Animations ===== */ @keyframes slideFadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+  header h2 {
+    font-size: 1.3rem;
+  }
 
-/* ===== Responsive Design ===== */ @media (max-width: 768px) { header h1.animated-heading { font-size: 2rem; }
+  .designation {
+    font-size: 0.95rem;
+  }
 
-header h2 { font-size: 1.3rem; }
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
 
-.designation { font-size: 0.95rem; }
+  section {
+    padding: 20px 15px;
+  }
 
-section { padding: 20px; }
+  .social-icons a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 
-.social-icons a { padding: 8px 12px; font-size: 0.9rem; }
-
-.social-icons img { width: 24px; height: 24px; } }
-
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
