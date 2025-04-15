@@ -122,7 +122,6 @@ ul {
 /* ===== Experience Styling ===== */
 .experience-item h3 {
   color: #388e3c;
-  background: linear-gradient(135deg, #43cea2, #185a9d);
   font-size: 1.3rem;
   margin-bottom: 6px;
 }
@@ -216,3 +215,6 @@ footer {
     height: 24px;
   }
     }
+section {
+  background-color: #00FFFF; /* Light Grayish White - very clean and professional */
+}
